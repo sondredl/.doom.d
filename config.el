@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "Sondre Lindkjølen"
+(setq user-full-name "Sondre Lindkjolen"
       user-mail-address "sondredl@gmail.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
@@ -40,8 +40,18 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
+;; (setq org-directory "~/")
 (setq org-directory "~/org/")
+;; (setq org-directory "~/Documents/ARque/")
+(after! org
+  (setq org-agenda-files "~/orgagenda/")
+  (setq org-agenda-include-diary t))
 
+
+;;(package! norwegian-holidays)
+
+
+;;(after! org-agenda)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
